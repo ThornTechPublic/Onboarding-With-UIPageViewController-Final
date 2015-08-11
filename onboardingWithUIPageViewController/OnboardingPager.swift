@@ -10,4 +10,29 @@ import UIKit
 
 class OnboardingPager : UIPageViewController {
     
+    override func viewDidLoad() {
+        dataSource = self
+        delegate = self
+    }
+    
+}
+
+// MARK: - UIPageViewControllerDataSource methods
+
+extension OnboardingPager : UIPageViewControllerDataSource {
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        return nil
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        return nil
+    }
+    
+}
+
+// MARK: - UIPageViewControllerDelegate methods
+
+extension OnboardingPager : UIPageViewControllerDelegate {
+    
 }
