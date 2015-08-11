@@ -23,6 +23,14 @@ class OnboardingPager : UIPageViewController {
     func getStepZero() -> StepZero {
         return storyboard!.instantiateViewControllerWithIdentifier("StepZero") as! StepZero
     }
+    
+    func getStepOne() -> StepOne {
+        return storyboard!.instantiateViewControllerWithIdentifier("StepOne") as! StepOne
+    }
+    
+    func getStepTwo() -> StepTwo {
+        return storyboard!.instantiateViewControllerWithIdentifier("StepTwo") as! StepTwo
+    }
 }
 
 // MARK: - UIPageViewControllerDataSource methods
@@ -30,11 +38,29 @@ class OnboardingPager : UIPageViewController {
 extension OnboardingPager : UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        return nil
+        if viewController.isKindOfClass(StepTwo) {
+            // 2 -> 1
+            return getStepOne()
+        } else if viewController.isKindOfClass(StepOne) {
+            // 1 -> 0
+            return getStepZero()
+        } else {
+            // 0 -> end of the road
+            return nil
+        }
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        return nil
+        if viewController.isKindOfClass(StepZero) {
+            // 0 -> 1
+            return getStepOne()
+        } else if viewController.isKindOfClass(StepOne) {
+            // 1 -> 2
+            return getStepTwo()
+        } else {
+            // 2 -> end of the road
+            return nil
+        }
     }
     
 }
