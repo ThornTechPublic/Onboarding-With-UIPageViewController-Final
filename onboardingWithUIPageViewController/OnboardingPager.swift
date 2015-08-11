@@ -11,10 +11,18 @@ import UIKit
 class OnboardingPager : UIPageViewController {
     
     override func viewDidLoad() {
+        // Set the dataSource and delegate in code.  
+        // I can't figure out how to do this in the Storyboard!
         dataSource = self
         delegate = self
+        
+        // This is the starting point.  Start with step zero.
+        setViewControllers([getStepZero()], direction: .Forward, animated: false, completion: nil)
     }
     
+    func getStepZero() -> StepZero {
+        return storyboard!.instantiateViewControllerWithIdentifier("StepZero") as! StepZero
+    }
 }
 
 // MARK: - UIPageViewControllerDataSource methods

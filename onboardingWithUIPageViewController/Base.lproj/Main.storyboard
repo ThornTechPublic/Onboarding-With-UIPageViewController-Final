@@ -8,7 +8,7 @@
         <!--Onboarding Pager-->
         <scene sceneID="TA1-PF-jy6">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="bmV-yP-FOL" customClass="OnboardingPager" customModule="onboardingWithUIPageViewController" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="bmV-yP-FOL" customClass="OnboardingPager" customModule="onboardingWithUIPageViewController" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Stz-Gm-0IB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="219" y="376"/>
@@ -16,7 +16,7 @@
         <!--Step Zero-->
         <scene sceneID="Qx8-1w-FqD">
             <objects>
-                <viewController id="0a8-Ab-X0L" customClass="StepZero" customModule="onboardingWithUIPageViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StepZero" id="0a8-Ab-X0L" customClass="StepZero" customModule="onboardingWithUIPageViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qum-Vp-zlD"/>
                         <viewControllerLayoutGuide type="bottom" id="5CT-eP-2RM"/>
@@ -48,7 +48,7 @@
         <!--Step One-->
         <scene sceneID="6zT-A6-nt5">
             <objects>
-                <viewController id="FCB-zw-2oO" customClass="StepOne" customModule="onboardingWithUIPageViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StepOne" id="FCB-zw-2oO" customClass="StepOne" customModule="onboardingWithUIPageViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DYi-s9-LiH"/>
                         <viewControllerLayoutGuide type="bottom" id="CED-Fa-7xy"/>
@@ -87,7 +87,7 @@
         <!--Step Two-->
         <scene sceneID="dML-vQ-285">
             <objects>
-                <viewController id="NbC-VN-gOs" customClass="StepTwo" customModule="onboardingWithUIPageViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StepTwo" id="NbC-VN-gOs" customClass="StepTwo" customModule="onboardingWithUIPageViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r07-w0-kKx"/>
                         <viewControllerLayoutGuide type="bottom" id="pLH-bF-Ylz"/>
