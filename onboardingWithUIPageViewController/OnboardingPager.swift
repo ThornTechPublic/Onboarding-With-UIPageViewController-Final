@@ -15,6 +15,8 @@ class OnboardingPager : UIPageViewController {
         // I can't figure out how to do this in the Storyboard!
         dataSource = self
         delegate = self
+        // this sets the background color of the built-in paging dots
+        view.backgroundColor = UIColor.darkGrayColor()
         
         // This is the starting point.  Start with step zero.
         setViewControllers([getStepZero()], direction: .Forward, animated: false, completion: nil)
@@ -61,6 +63,16 @@ extension OnboardingPager : UIPageViewControllerDataSource {
             // 2 -> end of the road
             return nil
         }
+    }
+    
+    // Enables pagination dots
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 3
+    }
+    
+    // This only gets called once, when setViewControllers is called
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 0
     }
     
 }
