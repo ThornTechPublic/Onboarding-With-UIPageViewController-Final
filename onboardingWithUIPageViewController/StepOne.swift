@@ -10,23 +10,65 @@ import UIKit
 
 class StepOne : UIViewController {
     
+    // the tofu
     @IBOutlet weak var imageView: UIImageView!
+    
+    // the tofu's center-x and the trash can's center-x
     @IBOutlet weak var horizontalConstraint: NSLayoutConstraint!
+
+    // the tofu's bottom and the trash can's bottom
     @IBOutlet weak var verticalConstraint: NSLayoutConstraint!
     
-    override func viewDidLoad() {
+    // helper function to delay whatever's in the callback
+    func delay(#seconds: Double, completion:()->()) {
+        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64( Double(NSEC_PER_SEC) * seconds ))
+        dispatch_after(popTime, dispatch_get_main_queue()) {
+            completion()
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        // reset animation to starting point
+        // so user can scroll back and re-watch.
+        // these numbers are pure trial and error, and might not work for other screens.
+        verticalConstraint.constant = 120
+        horizontalConstraint.constant = 104
+        imageView?.transform = CGAffineTransformMakeRotation(0)
         
-        horizontalConstraint.constant = 0
-        verticalConstraint.constant = 20
-
-        UIView.animateWithDuration(2.0,
-            delay: 0.5,
-            options: .CurveEaseIn,
-            animations: {
-                self.view.layoutIfNeeded()
-            },
-            completion: nil
-        )
+        // this hacky delay is so the screen gets its stuff in order before we start animating.
+        // otherwise the entire screen starts morphing in strange ways.
+        delay(seconds: 0.5, completion: {
+            
+            // vertical animation of the tofu dropping.
+            // not meant to be precise like newton's law
+            UIView.animateWithDuration(1.0,
+                delay: 0.0,
+                options: .CurveEaseIn,
+                animations: {
+                    // constraints don't get animated by default, so you need layoutIfNeeded()
+                    self.verticalConstraint.constant = 20
+                    self.view.layoutIfNeeded()
+                },
+                completion: nil
+            )
+            
+            // horizontal animation is twice as fast.
+            // gotta get to tofu over the can before it drops too far.
+            UIView.animateWithDuration(0.5,
+                delay: 0.0,
+                options: .CurveLinear,
+                animations: {
+                    // again, using layoutIfNeeded() for animating constraints
+                    self.horizontalConstraint.constant = 0
+                    self.view.layoutIfNeeded()
+                    // flip the tofu
+                    self.imageView?.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+                },
+                completion: nil
+            )
+            
+        })
         
     }
+    
 }

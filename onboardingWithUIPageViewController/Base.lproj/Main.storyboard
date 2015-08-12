@@ -93,23 +93,23 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Ffw-Ml-oOd" firstAttribute="bottom" secondItem="Ofy-a5-hQB" secondAttribute="bottom" constant="120" id="Di2-So-1S3" userLabel="tofu vertical"/>
                             <constraint firstItem="nkU-ND-if3" firstAttribute="leading" secondItem="bLP-wc-yu0" secondAttribute="leading" id="PtM-sB-2Hx"/>
-                            <constraint firstAttribute="trailing" secondItem="Ofy-a5-hQB" secondAttribute="trailing" constant="117" id="WXb-bW-D2c" userLabel="tofu horizontal"/>
+                            <constraint firstItem="Ffw-Ml-oOd" firstAttribute="centerX" secondItem="Ofy-a5-hQB" secondAttribute="centerX" constant="104" id="Tup-0H-i69" userLabel="tofu horizontal"/>
                             <constraint firstItem="Ffw-Ml-oOd" firstAttribute="bottom" secondItem="nkU-ND-if3" secondAttribute="bottom" constant="15" id="YyD-C7-ZQc"/>
                             <constraint firstAttribute="centerX" secondItem="4nb-fd-UQ3" secondAttribute="centerX" id="c62-M5-sxj"/>
                             <constraint firstItem="w5v-AT-lTZ" firstAttribute="top" secondItem="4nb-fd-UQ3" secondAttribute="bottom" constant="20" id="ehB-Cd-Njl"/>
                             <constraint firstItem="Ffw-Ml-oOd" firstAttribute="leading" secondItem="nkU-ND-if3" secondAttribute="trailing" constant="42" id="gcU-JU-zkF"/>
                             <constraint firstItem="CED-Fa-7xy" firstAttribute="bottom" secondItem="nkU-ND-if3" secondAttribute="bottom" constant="25" id="gy4-U6-Tjb"/>
-                            <constraint firstItem="CED-Fa-7xy" firstAttribute="bottom" secondItem="Ofy-a5-hQB" secondAttribute="bottom" constant="130" id="pEu-J0-S4h" userLabel="tofu vertical"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w5v-AT-lTZ" secondAttribute="trailing" id="svy-sM-KuK"/>
                             <constraint firstItem="w5v-AT-lTZ" firstAttribute="leading" secondItem="bLP-wc-yu0" secondAttribute="leadingMargin" id="vc5-dj-Ac4"/>
                             <constraint firstItem="4nb-fd-UQ3" firstAttribute="top" secondItem="DYi-s9-LiH" secondAttribute="top" constant="40" id="z8e-aE-WBD"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="horizontalConstraint" destination="WXb-bW-D2c" id="fVi-pE-gX2"/>
+                        <outlet property="horizontalConstraint" destination="Tup-0H-i69" id="goR-x4-pj6"/>
                         <outlet property="imageView" destination="Ofy-a5-hQB" id="PMk-iF-kUi"/>
-                        <outlet property="verticalConstraint" destination="pEu-J0-S4h" id="0rg-GZ-Ksb"/>
+                        <outlet property="verticalConstraint" destination="Di2-So-1S3" id="YVN-Ts-FGt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Oz-en-dvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
