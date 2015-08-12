@@ -19,14 +19,6 @@ class StepOne : UIViewController {
     // the tofu's bottom and the trash can's bottom
     @IBOutlet weak var verticalConstraint: NSLayoutConstraint!
     
-    // helper function to delay whatever's in the callback
-    func delay(#seconds: Double, completion:()->()) {
-        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64( Double(NSEC_PER_SEC) * seconds ))
-        dispatch_after(popTime, dispatch_get_main_queue()) {
-            completion()
-        }
-    }
-    
     override func viewWillAppear(animated: Bool) {
         // reset animation to starting point
         // so user can scroll back and re-watch.
@@ -37,7 +29,7 @@ class StepOne : UIViewController {
         
         // this hacky delay is so the screen gets its stuff in order before we start animating.
         // otherwise the entire screen starts morphing in strange ways.
-        delay(seconds: 0.5, completion: {
+        HelperLibrary.delay(seconds: 0.5, completion: {
             
             // vertical animation of the tofu dropping.
             // not meant to be precise like newton's law

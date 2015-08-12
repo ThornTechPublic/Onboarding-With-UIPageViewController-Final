@@ -16,6 +16,7 @@
 		FC5C4D8D1B7ABA8D00D3E6BC /* StepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4D8C1B7ABA8D00D3E6BC /* StepOne.swift */; };
 		FC5C4D8F1B7ABA9700D3E6BC /* StepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4D8E1B7ABA9700D3E6BC /* StepTwo.swift */; };
 		FC5C4D911B7ABAEF00D3E6BC /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C4D901B7ABAEF00D3E6BC /* OnboardingPager.swift */; };
+		FCBFD5FD1B7AE26D008EC5A4 /* HelperLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFD5FC1B7AE26D008EC5A4 /* HelperLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		FC5C4D8C1B7ABA8D00D3E6BC /* StepOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepOne.swift; sourceTree = "<group>"; };
 		FC5C4D8E1B7ABA9700D3E6BC /* StepTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTwo.swift; sourceTree = "<group>"; };
 		FC5C4D901B7ABAEF00D3E6BC /* OnboardingPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
+		FCBFD5FC1B7AE26D008EC5A4 /* HelperLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				FC5C4D8A1B7ABA8200D3E6BC /* StepZero.swift */,
 				FC5C4D8C1B7ABA8D00D3E6BC /* StepOne.swift */,
 				FC5C4D8E1B7ABA9700D3E6BC /* StepTwo.swift */,
+				FCBFD5FC1B7AE26D008EC5A4 /* HelperLibrary.swift */,
 			);
 			path = onboardingWithUIPageViewController;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC5C4D6B1B7AB58100D3E6BC /* AppDelegate.swift in Sources */,
+				FCBFD5FD1B7AE26D008EC5A4 /* HelperLibrary.swift in Sources */,
 				FC5C4D8B1B7ABA8200D3E6BC /* StepZero.swift in Sources */,
 				FC5C4D911B7ABAEF00D3E6BC /* OnboardingPager.swift in Sources */,
 				FC5C4D8F1B7ABA9700D3E6BC /* StepTwo.swift in Sources */,
@@ -423,6 +427,7 @@
 				FC5C4D861B7AB58200D3E6BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC5C4D871B7AB58200D3E6BC /* Build configuration list for PBXNativeTarget "onboardingWithUIPageViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +436,7 @@
 				FC5C4D891B7AB58200D3E6BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
