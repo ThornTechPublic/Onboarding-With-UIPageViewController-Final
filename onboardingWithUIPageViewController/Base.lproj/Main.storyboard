@@ -161,6 +161,13 @@
                                     <constraint firstAttribute="width" constant="88.5" id="jdG-XH-qBY"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="6zl-iH-8Js">
+                                <rect key="frame" x="183.5" y="441" width="50" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="1Gu-Dr-jjG"/>
+                                    <constraint firstAttribute="width" constant="50" id="kPy-1V-U7w"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -171,6 +178,8 @@
                             <constraint firstItem="fDB-Oz-7c7" firstAttribute="leading" secondItem="eEE-gJ-AwR" secondAttribute="leading" id="N4o-OQ-fOq"/>
                             <constraint firstItem="rhx-l1-KeK" firstAttribute="top" secondItem="hnY-Ti-y1a" secondAttribute="bottom" constant="20" id="PNC-gq-VDd"/>
                             <constraint firstItem="fDB-Oz-7c7" firstAttribute="bottom" secondItem="9Mh-Ll-Ott" secondAttribute="bottom" constant="-5" id="bU7-Ae-3CM"/>
+                            <constraint firstItem="TJY-5B-upE" firstAttribute="top" secondItem="6zl-iH-8Js" secondAttribute="bottom" constant="-35" id="bVa-sp-E8O"/>
+                            <constraint firstItem="6zl-iH-8Js" firstAttribute="leading" secondItem="TJY-5B-upE" secondAttribute="trailing" constant="-40" id="bzQ-3l-bE7"/>
                             <constraint firstItem="TJY-5B-upE" firstAttribute="centerY" secondItem="fDB-Oz-7c7" secondAttribute="centerY" constant="30" id="jBb-CS-AHz"/>
                             <constraint firstItem="hnY-Ti-y1a" firstAttribute="top" secondItem="r07-w0-kKx" secondAttribute="top" constant="40" id="lnZ-J6-Vaq"/>
                             <constraint firstItem="rhx-l1-KeK" firstAttribute="leading" secondItem="eEE-gJ-AwR" secondAttribute="leadingMargin" id="x9a-cF-a0n"/>
@@ -184,6 +193,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="burger" width="125" height="45"/>
         <image name="grill" width="91" height="92"/>
         <image name="guy" width="78" height="190"/>
         <image name="spatula" width="138" height="38"/>
