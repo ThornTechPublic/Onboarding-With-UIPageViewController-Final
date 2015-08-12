@@ -29,7 +29,7 @@ class StepOne : UIViewController {
         
         // this hacky delay is so the screen gets its stuff in order before we start animating.
         // otherwise the entire screen starts morphing in strange ways.
-        HelperLibrary.delay(seconds: 0.5, completion: {
+        HelperLibrary.delay(seconds: 1.0, completion: {
             
             // vertical animation of the tofu dropping.
             // not meant to be precise like newton's law
