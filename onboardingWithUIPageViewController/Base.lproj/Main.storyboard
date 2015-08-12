@@ -69,16 +69,48 @@
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guy" translatesAutoresizingMaskIntoConstraints="NO" id="nkU-ND-if3">
+                                <rect key="frame" x="0.0" y="279" width="185" height="264"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="264" id="2wP-Ys-rSp"/>
+                                    <constraint firstAttribute="width" constant="185" id="EVx-N9-3lx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tofu" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-a5-hQB">
+                                <rect key="frame" x="143" y="393" width="60" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="i1k-6z-5DG"/>
+                                    <constraint firstAttribute="height" constant="45" id="pZx-6a-wDw"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" translatesAutoresizingMaskIntoConstraints="NO" id="Ffw-Ml-oOd">
+                                <rect key="frame" x="227" y="438" width="100" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="DW2-21-Gg3"/>
+                                    <constraint firstAttribute="height" constant="120" id="dRr-pZ-AY8"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="nkU-ND-if3" firstAttribute="leading" secondItem="bLP-wc-yu0" secondAttribute="leading" id="PtM-sB-2Hx"/>
+                            <constraint firstAttribute="trailing" secondItem="Ofy-a5-hQB" secondAttribute="trailing" constant="117" id="WXb-bW-D2c" userLabel="tofu horizontal"/>
+                            <constraint firstItem="Ffw-Ml-oOd" firstAttribute="bottom" secondItem="nkU-ND-if3" secondAttribute="bottom" constant="15" id="YyD-C7-ZQc"/>
                             <constraint firstAttribute="centerX" secondItem="4nb-fd-UQ3" secondAttribute="centerX" id="c62-M5-sxj"/>
                             <constraint firstItem="w5v-AT-lTZ" firstAttribute="top" secondItem="4nb-fd-UQ3" secondAttribute="bottom" constant="20" id="ehB-Cd-Njl"/>
+                            <constraint firstItem="Ffw-Ml-oOd" firstAttribute="leading" secondItem="nkU-ND-if3" secondAttribute="trailing" constant="42" id="gcU-JU-zkF"/>
+                            <constraint firstItem="CED-Fa-7xy" firstAttribute="bottom" secondItem="nkU-ND-if3" secondAttribute="bottom" constant="25" id="gy4-U6-Tjb"/>
+                            <constraint firstItem="CED-Fa-7xy" firstAttribute="bottom" secondItem="Ofy-a5-hQB" secondAttribute="bottom" constant="130" id="pEu-J0-S4h" userLabel="tofu vertical"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w5v-AT-lTZ" secondAttribute="trailing" id="svy-sM-KuK"/>
                             <constraint firstItem="w5v-AT-lTZ" firstAttribute="leading" secondItem="bLP-wc-yu0" secondAttribute="leadingMargin" id="vc5-dj-Ac4"/>
                             <constraint firstItem="4nb-fd-UQ3" firstAttribute="top" secondItem="DYi-s9-LiH" secondAttribute="top" constant="40" id="z8e-aE-WBD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="horizontalConstraint" destination="WXb-bW-D2c" id="fVi-pE-gX2"/>
+                        <outlet property="imageView" destination="Ofy-a5-hQB" id="PMk-iF-kUi"/>
+                        <outlet property="verticalConstraint" destination="pEu-J0-S4h" id="0rg-GZ-Ksb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Oz-en-dvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,6 +156,11 @@
             <point key="canvasLocation" x="1283" y="376"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="guy" width="78" height="190"/>
+        <image name="tofu" width="100" height="74"/>
+        <image name="trash" width="120" height="120"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
