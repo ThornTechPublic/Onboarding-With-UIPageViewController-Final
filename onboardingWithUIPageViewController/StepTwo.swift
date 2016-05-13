@@ -23,7 +23,7 @@ class StepTwo : UIViewController {
         
         // this hacky delay is so the screen gets its stuff in order before we start animating.
         // otherwise the entire screen starts morphing in strange ways.
-        HelperLibrary.delay(seconds: 0.5, completion: {
+        HelperLibrary.delay(0.5, completion: {
             
             // burger goes up
             // not meant to be precise like newton's law
